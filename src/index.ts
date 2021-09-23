@@ -1,3 +1,7 @@
 import { renderHTML } from "./utils";
+import { writeFileSync } from "fs";
 
-console.log(renderHTML("Hello World", "pl", [`<h1> Hello World</h1>`]));
+writeFileSync(
+    "./build/index.html",
+    renderHTML("Hello World", "pl", [`<h1> Hello World</h1>`])
+);

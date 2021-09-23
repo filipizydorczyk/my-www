@@ -4,7 +4,8 @@
     "description": "My personal website",
     "main": "src/index.ts",
     "scripts": {
-        "build": "./node_modules/.bin/ts-node src/index.ts",
+        "build": "mkdir -p build && rm -rf ./build/* && cp -r assets ./build && ./node_modules/.bin/sass ./src/styles/main.scss ./build/styles.css && ./node_modules/.bin/ts-node src/index.ts",
+        "serve": "node_modules/.bin/http-server build",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [
@@ -16,6 +17,8 @@
         "@types/node": "^16.9.6",
         "ts-node": "^10.2.1",
         "tslib": "^2.3.1",
-        "typescript": "^4.4.3"
+        "typescript": "^4.4.3",
+        "http-server": "^0.11.1",
+        "sass": "^1.26.11"
     }
 }
