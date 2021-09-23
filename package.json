@@ -1,14 +1,21 @@
 {
-  "name": "filipizydorczykwww",
-  "version": "1.0.0",
-  "description": "My personal website",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "www"
-  ],
-  "author": "filip.izydorczyk@protonmail.com",
-  "license": "ISC"
+    "name": "filipizydorczykwww",
+    "version": "1.0.0",
+    "description": "My personal website",
+    "main": "src/index.ts",
+    "scripts": {
+        "build": "./node_modules/.bin/ts-node src/index.ts",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "www"
+    ],
+    "author": "filip.izydorczyk@protonmail.com",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/node": "^16.9.6",
+        "ts-node": "^10.2.1",
+        "tslib": "^2.3.1",
+        "typescript": "^4.4.3"
+    }
 }
