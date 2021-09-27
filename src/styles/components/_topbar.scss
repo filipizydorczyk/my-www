@@ -1,0 +1,37 @@
+@import "../spacing";
+@import "../colors";
+@import "../fonts";
+
+.topbar {
+    background: linear-gradient($blue-600, $blue-300);
+    padding: $horizontal-space-900 0;
+    text-align: center;
+
+    &__header {
+        color: $white;
+        font-size: $font-size-800;
+        text-transform: uppercase;
+        margin-bottom: $vericatl-space-750;
+    }
+
+    &__description {
+        max-width: 950px;
+        color: $white;
+        font-size: $font-size-300;
+        margin: 0 auto;
+        margin-bottom: $vericatl-space-500;
+    }
+
+    &__button {
+        color: $white;
+        display: block;
+        max-width: 260px;
+        margin: 0 auto;
+        padding: $horizontal-space-250 $horizontal-space-750;
+        font-size: $font-size-300;
+        font-weight: 300;
+        text-decoration: none;
+        border: 2px solid $white;
+        border-radius: 40px;
+    }
+}

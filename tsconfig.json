@@ -3,5 +3,5 @@
     "ts-node": {
         "files": true
     },
-    "files": ["src/index.ts", "src/.d.ts"]
+    "files": ["src/index.ts", "src/.d.ts", "src/components/topbar.ts"]
 }
