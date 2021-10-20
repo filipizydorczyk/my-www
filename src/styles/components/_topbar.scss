@@ -4,7 +4,6 @@
 
 .topbar {
     background: linear-gradient($blue-600, $blue-300);
-    padding: $horizontal-space-900 0;
     text-align: center;
 
     &__header {
@@ -22,16 +21,31 @@
         margin-bottom: $vericatl-space-500;
     }
 
+    &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     &__button {
         color: $white;
         display: block;
         max-width: 260px;
-        margin: 0 auto;
+        margin: 0 calc($font-size-300 / 2);
         padding: $horizontal-space-250 $horizontal-space-750;
         font-size: $font-size-300;
         font-weight: 300;
         text-decoration: none;
         border: 2px solid $white;
         border-radius: 40px;
+    }
+
+    &--half-size {
+        padding: $horizontal-space-900 0;
+        padding-bottom: $horizontal-space-750;
+    }
+
+    &--full-size {
+        padding: $horizontal-space-900 0;
     }
 }

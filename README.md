@@ -1,3 +1,8 @@
+This is repo with my website that is currently in development stage. It is going to look like this:
+
+![](./mockups/main.png)
+![](./mockups/portfolio.png)
+
 # Build
 
 -   `npm install` - install dependencies
@@ -11,3 +16,5 @@
 ```html
 <section id="id"></section>
 ```
+
+2. In code use camel case
