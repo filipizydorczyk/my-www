@@ -3,6 +3,9 @@
 @import "../fonts";
 @import "../animations";
 
+$text-breakpoint: 1000px;
+$buttons-breakpoint: 500px;
+
 .topbar {
     background: linear-gradient(-45deg, $blue-600, $blue-300, $blue-200);
     background-size: 200% 200%;
@@ -14,6 +17,11 @@
         font-size: $font-size-800;
         text-transform: uppercase;
         margin-bottom: $vericatl-space-750;
+
+        @media (max-width: $text-breakpoint) {
+            font-size: $font-size-700;
+            margin-bottom: $vericatl-space-500;
+        }
     }
 
     &__description {
@@ -23,33 +31,63 @@
         margin: 0 auto;
         padding: 0 $font-size-100;
         margin-bottom: $vericatl-space-500;
+
+        @media (max-width: $text-breakpoint) {
+            font-size: $font-size-200;
+        }
     }
 
     &__buttons {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media (max-width: $buttons-breakpoint) {
+            flex-direction: column;
+            padding: $horizontal-space-250;
+        }
     }
 
     &__button {
         color: $white;
         display: block;
         max-width: 260px;
-        margin: 0 calc($font-size-300 / 2);
+        margin: 0 $horizontal-space-250;
         padding: $horizontal-space-250 $horizontal-space-750;
         font-size: $font-size-300;
         font-weight: 300;
         text-decoration: none;
         border: 2px solid $white;
         border-radius: 40px;
+
+        @media (max-width: $text-breakpoint) {
+            font-size: $font-size-200;
+        }
+
+        @media (max-width: $buttons-breakpoint) {
+            padding: $horizontal-space-100 $horizontal-space-500;
+            margin: 0;
+            margin-bottom: $horizontal-space-250;
+            max-width: 100%;
+            width: 100%;
+        }
     }
 
     &--half-size {
         padding: $horizontal-space-900 0;
         padding-bottom: $horizontal-space-750;
+
+        @media (max-width: $text-breakpoint) {
+            padding: $horizontal-space-750 0;
+            padding-bottom: $horizontal-space-500;
+        }
     }
 
     &--full-size {
         padding: $horizontal-space-900 0;
+
+        @media (max-width: $text-breakpoint) {
+            padding: $horizontal-space-750 0;
+        }
     }
 }
