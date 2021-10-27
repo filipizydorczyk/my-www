@@ -1,0 +1,16 @@
+@import "../spacing";
+@import "../colors";
+
+.footer {
+    &__profile-picture-section {
+        width: 300px;
+        padding: $horizontal-space-500;
+        background-color: $gray-600;
+
+        & img {
+            border-radius: 100%;
+            width: 100%;
+            height: auto;
+        }
+    }
+}

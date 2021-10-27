@@ -11,6 +11,8 @@ This is repo with my website that is currently in development stage. It is going
 
 # Code conduct
 
+## Typescript
+
 1. Each segment should be covered with `section` tag with `id`
 
 ```html
@@ -18,3 +20,26 @@ This is repo with my website that is currently in development stage. It is going
 ```
 
 2. In code use camel case
+
+## Styles
+
+1. Use BEM naming convention for calss attribute
+2. In scss files keep given order: rules, css classes, html tags, media selectors
+
+```scss
+&__example {
+    color: $white;
+
+    &--black {
+        color: $black;
+    }
+
+    & img {
+        width: 100%;
+    }
+
+    @media (max-width: $text-breakpoint) {
+        font-size: $font-size-200;
+    }
+}
+```
