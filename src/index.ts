@@ -2,6 +2,7 @@ import { renderHTML } from "./utils";
 import { writeFileSync } from "fs";
 import TopBar, { TopBarArgs } from "./components/topbar";
 import { LoremIpsum } from "lorem-ipsum";
+import Footer from "./components/footer";
 
 const lorem = new LoremIpsum({
     sentencesPerParagraph: {
@@ -25,5 +26,5 @@ const tobBarData: TopBarArgs = {
 
 writeFileSync(
     "./build/index.html",
-    renderHTML("Hello World", "pl", [TopBar(tobBarData)])
+    renderHTML("Hello World", "pl", [TopBar(tobBarData), Footer({})])
 );
