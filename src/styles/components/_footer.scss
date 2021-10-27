@@ -1,23 +1,26 @@
 @import "../spacing";
 @import "../colors";
 
+$footer-height: 300px;
+
 .footer {
     display: flex;
 
     &__profile-picture-section {
-        width: 300px;
+        height: $footer-height;
         padding: $horizontal-space-500;
         background-color: $gray-600;
 
         & img {
             border-radius: 100%;
-            width: 100%;
-            height: auto;
+            width: auto;
+            height: 100%;
         }
     }
 
     &__text-section {
         flex-grow: 1;
-        height: 100%;
+        height: $footer-height;
+        background-color: $gray-900;
     }
 }
