@@ -1,5 +1,6 @@
 @import "../spacing";
 @import "../colors";
+@import "../fonts";
 
 $footer-height: 300px;
 
@@ -31,5 +32,25 @@ $footer-height: 300px;
         margin-left: calc(-1 * $horizontal-space-500 - 2px);
         border-left: 4px solid $gray-300;
         height: 100%;
+
+        & h3,
+        & p {
+            max-width: 650px;
+        }
+
+        & h3 {
+            font-size: $font-size-200;
+            font-weight: bold;
+        }
+    }
+
+    &__email {
+        font-size: $font-size-50;
+        margin-bottom: $vericatl-space-100;
+    }
+
+    &__description {
+        font-size: $font-size-100;
+        font-weight: 300;
     }
 }

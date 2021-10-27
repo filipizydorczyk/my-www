@@ -26,7 +26,7 @@ const tobBarData: TopBarArgs = {
 const footerData: FooterArgs = {
     name: "Filip Izydorczyk",
     email: "filip.izydorczyk@protonmail.com",
-    description: lorem.generateSentences(3),
+    description: lorem.generateSentences(6),
     photo: "/assets/photos/profile.jpg",
 };
 

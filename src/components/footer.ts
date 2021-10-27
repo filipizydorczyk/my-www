@@ -15,8 +15,8 @@ const Footer = ({ name, email, description, photo }: FooterArgs) => {
         <div class="footer__text-section">
             <div class="footer__about-section">
                 <h3>${name}</h3>
-                <p>${email}</p>
-                <p>${description}</p>
+                <p class="footer__email">${email}</p>
+                <p class="footer__description">${description}</p>
             </div>
         </div>
     </footer>`;
