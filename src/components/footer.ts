@@ -1,11 +1,13 @@
-export type FooterArgs = {};
+export type FooterArgs = {
+    photo: string;
+};
 
-const Footer = ({}: FooterArgs) => {
+const Footer = ({ photo }: FooterArgs) => {
     return /* HTML */ `<footer class="footer">
         <div class="footer__profile-picture-section">
-            <img src="/assets/photos/profile.jpg" />
+            <img src="${photo}" />
         </div>
-        <div></div>
+        <div class="footer__text-section"></div>
     </footer>`;
 };
 
