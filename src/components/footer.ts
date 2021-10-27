@@ -1,5 +1,7 @@
+import { HTMLPath } from "html-elemnets";
+
 export type FooterArgs = {
-    photo: string;
+    photo: HTMLPath;
 };
 
 const Footer = ({ photo }: FooterArgs) => {
