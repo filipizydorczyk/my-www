@@ -7,7 +7,7 @@ $footer-height: 300px;
 .footer {
     display: flex;
 
-    &__profile-picture-section {
+    &__profile-picture {
         height: $footer-height;
         padding: $horizontal-space-500;
         background-color: $gray-600;
@@ -19,15 +19,17 @@ $footer-height: 300px;
         }
     }
 
-    &__text-section {
+    &__info {
         flex-grow: 1;
         height: $footer-height;
         background-color: $gray-900;
         padding: $horizontal-space-500;
+        display: flex;
     }
 
-    &__about-section {
+    &__about {
         color: $white;
+        flex-grow: 1;
         padding-left: $horizontal-space-500;
         margin-left: calc(-1 * $horizontal-space-500 - 2px);
         border-left: 4px solid $gray-300;
@@ -42,6 +44,10 @@ $footer-height: 300px;
             font-size: $font-size-200;
             font-weight: bold;
         }
+    }
+
+    &__socials {
+        width: 200px;
     }
 
     &__email {

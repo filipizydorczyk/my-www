@@ -28,6 +28,7 @@ const footerData: FooterArgs = {
     email: "filip.izydorczyk@protonmail.com",
     description: lorem.generateSentences(6),
     photo: "/assets/photos/profile.jpg",
+    socials: [],
 };
 
 writeFileSync(
