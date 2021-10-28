@@ -48,6 +48,27 @@ $footer-height: 300px;
 
     &__socials {
         width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+
+    &__social {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: $vericatl-space-100;
+
+        & a {
+            font-size: $font-size-100;
+            color: $white;
+            text-decoration: none;
+            margin-right: $horizontal-space-100;
+        }
+
+        & img {
+            height: 21px;
+            width: 21px;
+        }
     }
 
     &__email {

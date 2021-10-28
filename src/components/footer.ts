@@ -1,4 +1,5 @@
 import { HTMLUrl, Social } from "html-elemnets";
+import { socials } from "../storage";
 
 export type FooterArgs = {
     name: string;
@@ -19,7 +20,16 @@ const Footer = ({ name, email, description, photo }: FooterArgs) => {
                 <p class="footer__email">${email}</p>
                 <p class="footer__description">${description}</p>
             </div>
-            <div class="footer__socials"></div>
+            <div class="footer__socials">
+                ${socials
+                    .map((social) => {
+                        return /* HTML */ `<div class="footer__social">
+                            <img src="${social.icon}" />
+                            <a href="${social.href}">${social.name}</a>
+                        </div>`;
+                    })
+                    .join("\n")}
+            </div>
         </div>
     </footer>`;
 };
