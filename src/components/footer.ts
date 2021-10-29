@@ -25,7 +25,9 @@ const Footer = ({ name, email, description, photo }: FooterArgs) => {
                     .map((social) => {
                         return /* HTML */ `<div class="footer__social">
                             <img src="${social.icon}" />
-                            <a href="${social.href}">${social.name}</a>
+                            <a target="_blank" href="${social.href}"
+                                >${social.name}</a
+                            >
                         </div>`;
                     })
                     .join("\n")}

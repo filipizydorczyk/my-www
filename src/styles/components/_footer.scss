@@ -3,6 +3,9 @@
 @import "../fonts";
 
 $footer-height: 300px;
+$first-column-brake: 800px;
+$second-column-brake: 730px;
+$padding-brake: 360px;
 
 .footer {
     display: flex;
@@ -17,6 +20,25 @@ $footer-height: 300px;
             width: auto;
             height: 100%;
         }
+
+        @media (max-width: $second-column-brake) {
+            display: none;
+            height: auto;
+            padding: $horizontal-space-250 $horizontal-space-500;
+
+            & img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 550px) {
+            display: block;
+        }
+
+        @media (max-width: $padding-brake) {
+            padding: $horizontal-space-250;
+        }
     }
 
     &__info {
@@ -25,6 +47,18 @@ $footer-height: 300px;
         background-color: $gray-900;
         padding: $horizontal-space-500;
         display: flex;
+
+        @media (max-width: $first-column-brake) {
+            flex-direction: column;
+        }
+
+        @media (max-width: $second-column-brake) {
+            height: auto;
+        }
+
+        @media (max-width: 360px) {
+            padding: $horizontal-space-250;
+        }
     }
 
     &__about {
@@ -44,6 +78,22 @@ $footer-height: 300px;
             font-size: $font-size-200;
             font-weight: bold;
         }
+
+        @media (max-width: $second-column-brake) {
+            padding-left: 0;
+            margin-left: 0;
+            border-left: none;
+
+            padding-top: $horizontal-space-500;
+            margin-top: calc(-1 * $horizontal-space-500 - 2px);
+            border-top: 4px solid $gray-300;
+        }
+
+        @media (max-width: $padding-brake) {
+            padding-top: $horizontal-space-250;
+            margin-top: calc(-1 * $horizontal-space-250 - 2px);
+            border-top: 4px solid $gray-300;
+        }
     }
 
     &__socials {
@@ -51,6 +101,11 @@ $footer-height: 300px;
         display: flex;
         flex-direction: column;
         justify-content: end;
+
+        @media (max-width: $first-column-brake) {
+            justify-content: start;
+            flex-direction: row;
+        }
     }
 
     &__social {
@@ -69,6 +124,10 @@ $footer-height: 300px;
             height: 21px;
             width: 21px;
         }
+
+        @media (max-width: $first-column-brake) {
+            margin-right: $horizontal-space-100;
+        }
     }
 
     &__email {
@@ -79,5 +138,13 @@ $footer-height: 300px;
     &__description {
         font-size: $font-size-100;
         font-weight: 300;
+
+        @media (max-width: 840px) {
+            font-size: $font-size-50;
+        }
+    }
+
+    @media (max-width: $second-column-brake) {
+        flex-direction: column;
     }
 }
