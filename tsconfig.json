@@ -8,6 +8,7 @@
         "src/.d.ts",
         "src/storage.ts",
         "src/components/topbar.ts",
-        "src/components/footer.ts"
+        "src/components/footer.ts",
+        "src/components/cta.ts"
     ]
 }

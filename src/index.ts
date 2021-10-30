@@ -3,6 +3,7 @@ import { writeFileSync } from "fs";
 import { loremIpsum, name, email, socials } from "./storage";
 import TopBar, { TopBarArgs } from "./components/topbar";
 import Footer, { FooterArgs } from "./components/footer";
+import Cta, { CtaArgs } from "./components/cta";
 
 const tobBarData: TopBarArgs = {
     title: "Test",
@@ -20,7 +21,17 @@ const footerData: FooterArgs = {
     socials,
 };
 
+const ctaData: CtaArgs = {
+    background: "/assets/photos/code.jpg",
+    href: "#",
+    text: loremIpsum.generateWords(3),
+};
+
 writeFileSync(
     "./build/index.html",
-    renderHTML("Hello World", "pl", [TopBar(tobBarData), Footer(footerData)])
+    renderHTML("Hello World", "pl", [
+        TopBar(tobBarData),
+        Cta(ctaData),
+        Footer(footerData),
+    ])
 );

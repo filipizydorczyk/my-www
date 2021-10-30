@@ -1,0 +1,26 @@
+@import "../colors";
+@import "../spacing";
+@import "../fonts";
+
+.cta {
+    padding: $vericatl-space-1000 $horizontal-space-100;
+    background-size: cover;
+    filter: grayscale(100%);
+
+    &__text {
+        font-size: $font-size-600;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        text-decoration: none;
+        color: $white;
+
+        @media (max-width: 600px) {
+            font-size: $font-size-500;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        padding: $vericatl-space-900 $horizontal-space-250;
+    }
+}
