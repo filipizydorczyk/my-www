@@ -1,0 +1,23 @@
+@import "../fonts";
+@import "../colors";
+@import "../spacing";
+
+.stepped-list {
+    padding-top: $vericatl-space-750;
+    padding-bottom: $vericatl-space-900;
+
+    &__container {
+        max-width: 900px;
+        margin: 0 auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: $horizontal-space-500;
+    }
+
+    & h1 {
+        font-size: $font-size-600;
+        text-align: center;
+        color: $black;
+    }
+}

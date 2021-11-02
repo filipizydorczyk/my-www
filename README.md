@@ -43,3 +43,11 @@ This is repo with my website that is currently in development stage. It is going
     }
 }
 ```
+
+3. Join maped element with new lines
+
+```js
+`<div class="stepped-list__container">
+    ${elements.map((element) => `<div></div>`).join("\n")}
+</div>`;
+```
