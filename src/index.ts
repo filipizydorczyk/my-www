@@ -39,6 +39,14 @@ const steppedListData: SteppedListArgs = {
             title: loremIpsum.generateWords(3),
             content: loremIpsum.generateSentences(4),
         },
+        {
+            title: loremIpsum.generateWords(3),
+            content: loremIpsum.generateSentences(4),
+        },
+        {
+            title: loremIpsum.generateWords(3),
+            content: loremIpsum.generateSentences(4),
+        },
     ],
 };
 
