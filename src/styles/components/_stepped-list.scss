@@ -2,6 +2,8 @@
 @import "../colors";
 @import "../spacing";
 
+$text-brake: 1000px;
+
 .stepped-list {
     padding-top: $vericatl-space-750;
     padding-bottom: $vericatl-space-900;
@@ -11,29 +13,32 @@
         margin: 0 auto;
         width: 100%;
         display: grid;
-        grid-template-columns: auto auto;
-        grid-column-gap: $horizontal-space-500;
+        grid-template-columns: 50% 50%;
+
+        @media (max-width: 600px) {
+            grid-template-columns: auto;
+        }
     }
 
     &__element {
         position: relative;
-        height: 350px;
-
-        &:nth-child(2) {
-            margin-top: $vericatl-space-900;
-        }
-
-        &:nth-child(2n + 3) {
-            margin-top: calc(-1 * $vericatl-space-900);
-        }
+        margin: 0 $horizontal-space-250;
 
         & h3 {
             font-size: $font-size-400;
             margin-bottom: $vericatl-space-250;
+
+            @media (max-width: $text-brake) {
+                font-size: $font-size-300;
+            }
         }
 
         & p {
             font-size: $font-size-200;
+
+            @media (max-width: $text-brake) {
+                font-size: $font-size-100;
+            }
         }
 
         & img {
@@ -44,6 +49,22 @@
             max-height: 70px;
             width: 100%;
         }
+
+        @media (max-width: $text-brake) {
+            margin-bottom: $vericatl-space-500;
+        }
+
+        @media (min-width: 830px) {
+            height: 370px;
+
+            &:nth-child(2) {
+                margin-top: $vericatl-space-900;
+            }
+
+            &:nth-child(2n + 3) {
+                margin-top: calc(-1 * $vericatl-space-900);
+            }
+        }
     }
 
     & h1 {
@@ -51,5 +72,15 @@
         text-align: center;
         color: $black;
         margin-bottom: $vericatl-space-750;
+
+        @media (max-width: $text-brake) {
+            font-size: $font-size-500;
+            margin-bottom: $vericatl-space-500;
+        }
+    }
+
+    @media (max-width: $text-brake) {
+        padding-top: $vericatl-space-500;
+        padding-bottom: $vericatl-space-750;
     }
 }
