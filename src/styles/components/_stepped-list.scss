@@ -23,6 +23,7 @@ $text-brake: 1000px;
     &__element {
         position: relative;
         margin: 0 $horizontal-space-250;
+        margin-bottom: $vericatl-space-500;
 
         & h3 {
             font-size: $font-size-400;
@@ -50,13 +51,7 @@ $text-brake: 1000px;
             width: 100%;
         }
 
-        @media (max-width: $text-brake) {
-            margin-bottom: $vericatl-space-500;
-        }
-
         @media (min-width: 830px) {
-            height: 370px;
-
             &:nth-child(2) {
                 margin-top: $vericatl-space-900;
             }
