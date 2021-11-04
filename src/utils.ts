@@ -18,6 +18,8 @@ export const renderHTML = (
                 <title>${title}</title>
 
                 <link rel="stylesheet" href="styles.css" />
+
+                <script src="/assets/js/siema.min.js"></script>
             </head>
             <body>
                 ${components.map((component) => `${component}`).join("\n")}

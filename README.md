@@ -51,3 +51,8 @@ This is repo with my website that is currently in development stage. It is going
     ${elements.map((element) => `<div></div>`).join("\n")}
 </div>`;
 ```
+
+# Resources
+
+Slider that is used in this project is [siema slider](https://github.com/pawelgrzybek/siema).
+Logos were searched on [seek logo](https://seeklogo.com/), [wikimedia](https://commons.wikimedia.org) or on companies websites.
