@@ -4,16 +4,24 @@ import { LoremIpsum } from "lorem-ipsum";
 export const email: string = "filip.izydorczyk@protonmail.com";
 export const name: string = "Filip Izydorczyk";
 
+export const icons = {
+    github: "/assets/icons/github.svg",
+    linkedin: "/assets/icons/linked_in.svg",
+    capgemini: "/assets/icons/capgemini.svg",
+    hobbajt: "/assets/icons/hobbajt.png",
+    sealcode: "/assets/icons/sealcode.svg",
+};
+
 export const socials: Array<Social> = [
     {
         name: "GitHub",
         href: "https://github.com/filipizydorczyk/",
-        icon: "/assets/icons/github.svg",
+        icon: icons.github,
     },
     {
         name: "Linkedin",
         href: "https://www.linkedin.com/in/filip-izydorczyk-39577a216/",
-        icon: "/assets/icons/linked_in.svg",
+        icon: icons.linkedin,
     },
 ];
 

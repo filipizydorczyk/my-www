@@ -19,6 +19,7 @@ const SteppedList = ({ header, elements }: SteppedListArgs) => {
                     return /* HTML */ `<div class="stepped-list__element">
                         <h3>${element.title}</h3>
                         <p>${element.content}</p>
+                        ${element.icon ? `<img src="${element.icon}" />` : ``}
                     </div>`;
                 })
                 .join("\n")}

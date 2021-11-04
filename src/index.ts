@@ -1,6 +1,6 @@
 import { renderHTML } from "./utils";
 import { writeFileSync } from "fs";
-import { loremIpsum, name, email, socials } from "./storage";
+import { loremIpsum, name, email, socials, icons } from "./storage";
 import TopBar, { TopBarArgs } from "./components/topbar";
 import Footer, { FooterArgs } from "./components/footer";
 import Cta, { CtaArgs } from "./components/cta";
@@ -32,20 +32,24 @@ const steppedListData: SteppedListArgs = {
     header: loremIpsum.generateWords(3),
     elements: [
         {
-            title: loremIpsum.generateWords(3),
+            title: loremIpsum.generateWords(1),
             content: loremIpsum.generateSentences(4),
+            icon: icons.capgemini,
         },
         {
-            title: loremIpsum.generateWords(3),
+            title: loremIpsum.generateWords(1),
             content: loremIpsum.generateSentences(4),
+            icon: icons.sealcode,
         },
         {
-            title: loremIpsum.generateWords(3),
+            title: loremIpsum.generateWords(1),
             content: loremIpsum.generateSentences(4),
+            icon: icons.hobbajt,
         },
         {
-            title: loremIpsum.generateWords(3),
+            title: loremIpsum.generateWords(1),
             content: loremIpsum.generateSentences(4),
+            icon: icons.capgemini,
         },
     ],
 };

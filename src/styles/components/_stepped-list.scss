@@ -16,7 +16,8 @@
     }
 
     &__element {
-        height: 235px;
+        position: relative;
+        height: 350px;
 
         &:nth-child(2) {
             margin-top: $vericatl-space-900;
@@ -24,6 +25,24 @@
 
         &:nth-child(2n + 3) {
             margin-top: calc(-1 * $vericatl-space-900);
+        }
+
+        & h3 {
+            font-size: $font-size-400;
+            margin-bottom: $vericatl-space-250;
+        }
+
+        & p {
+            font-size: $font-size-200;
+        }
+
+        & img {
+            position: absolute;
+            top: calc(-1 * $vericatl-space-250);
+            right: 0;
+            max-width: 70px;
+            max-height: 70px;
+            width: 100%;
         }
     }
 
