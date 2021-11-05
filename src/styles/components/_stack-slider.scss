@@ -3,6 +3,7 @@
 @import "../fonts";
 
 $text-width: 950px;
+$text-brake: 1000px;
 
 .stack-slider {
     padding: $vericatl-space-750 0;
@@ -15,6 +16,7 @@ $text-width: 950px;
         border: 1px solid $black;
         border-radius: 100%;
         position: relative;
+        overflow: hidden;
 
         & img {
             max-width: calc(200px - $horizontal-space-750);
@@ -36,15 +38,24 @@ $text-width: 950px;
         margin: 0 auto;
         max-width: $text-width;
         text-align: center;
+        padding: 0 $horizontal-space-250;
     }
 
     & h1 {
         font-size: $font-size-600;
         margin-bottom: $vericatl-space-100;
+
+        @media (max-width: $text-brake) {
+            font-size: $font-size-500;
+        }
     }
 
     & p {
         font-size: $font-size-200;
         margin-bottom: $vericatl-space-500;
+
+        @media (max-width: $text-brake) {
+            font-size: $font-size-100;
+        }
     }
 }
