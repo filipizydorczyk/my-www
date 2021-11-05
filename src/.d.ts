@@ -18,5 +18,6 @@ declare module "html-elemnets" {
     type Technology = {
         name: string;
         icon: HTMLUrl;
+        href?: HTMLUrl;
     };
 }

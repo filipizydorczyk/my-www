@@ -10,6 +10,7 @@
         "src/components/topbar.ts",
         "src/components/footer.ts",
         "src/components/cta.ts",
-        "src/components/stepped-list.ts"
+        "src/components/stepped-list.ts",
+        "src/components/stack-slider.ts"
     ]
 }
