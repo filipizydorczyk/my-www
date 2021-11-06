@@ -80,6 +80,11 @@ $buttons-breakpoint: 500px;
         border-top: 3px solid $white;
         height: 0;
         max-width: 950px;
+
+        @media (max-width: 950px) {
+            margin: 0 $horizontal-space-250;
+            margin-top: $vericatl-space-750;
+        }
     }
 
     @media (max-width: $text-breakpoint) {
