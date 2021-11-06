@@ -11,6 +11,7 @@ $buttons-breakpoint: 500px;
     background-size: 200% 200%;
     animation: gradient 15s ease infinite;
     text-align: center;
+    padding: $horizontal-space-900 0;
 
     &__header {
         color: $white;
@@ -73,21 +74,15 @@ $buttons-breakpoint: 500px;
         }
     }
 
-    &--half-size {
-        padding: $horizontal-space-900 0;
-        padding-bottom: $horizontal-space-750;
-
-        @media (max-width: $text-breakpoint) {
-            padding: $horizontal-space-750 0;
-            padding-bottom: $horizontal-space-500;
-        }
+    &__separator {
+        margin: 0 auto;
+        margin-top: $vericatl-space-750;
+        border-top: 3px solid $white;
+        height: 0;
+        max-width: 950px;
     }
 
-    &--full-size {
-        padding: $horizontal-space-900 0;
-
-        @media (max-width: $text-breakpoint) {
-            padding: $horizontal-space-750 0;
-        }
+    @media (max-width: $text-breakpoint) {
+        padding: $horizontal-space-750 0;
     }
 }

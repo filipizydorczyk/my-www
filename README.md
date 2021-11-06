@@ -52,6 +52,37 @@ This is repo with my website that is currently in development stage. It is going
 </div>`;
 ```
 
+4. Content passed to component should be seperated of the component for readability
+
+```js
+const SliderData: StackSliderArgs = {
+    title: loremIpsum.generateWords(3),
+    description: loremIpsum.generateSentences(4),
+    items: stack,
+};
+
+//...
+
+SteppedList(steppedListData);
+```
+
+If component lets you to pass other component as arg do this that way
+
+```js
+const tobBarData: TopBarArgs = {
+    title: "Test",
+    description: loremIpsum.generateSentences(3),
+    buttons: [
+        { text: "Button", href: "#" },
+        { text: "Button", href: "#" },
+    ],
+};
+
+//...
+
+TopBar({ ...tobBarData, extraComponent: StackSlider(SliderData) });
+```
+
 # Resources
 
 Slider that is used in this project is [siema slider](https://github.com/pawelgrzybek/siema).

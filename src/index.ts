@@ -59,13 +59,13 @@ const SliderData: StackSliderArgs = {
     title: loremIpsum.generateWords(3),
     description: loremIpsum.generateSentences(4),
     items: stack,
+    colorVariant: "white-color",
 };
 
 writeFileSync(
     "./build/index.html",
     renderHTML("Hello World", "pl", [
-        TopBar(tobBarData),
-        StackSlider(SliderData),
+        TopBar({ ...tobBarData, extraComponent: StackSlider(SliderData) }),
         SteppedList(steppedListData),
         Cta(ctaData),
         Footer(footerData),

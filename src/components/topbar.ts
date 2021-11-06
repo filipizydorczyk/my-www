@@ -1,21 +1,19 @@
-import { HTMLButtonData } from "html-elemnets";
-
-export type TopBarPaddingType = "full-size" | "half-size";
+import { HTMLButtonData, HTMLComponent } from "html-elemnets";
 
 export type TopBarArgs = {
     title: string;
     description: string;
     buttons: HTMLButtonData[];
-    sizeVariant?: TopBarPaddingType;
+    extraComponent?: HTMLComponent;
 };
 
 const TopBar = ({
     title,
     description,
     buttons,
-    sizeVariant = "full-size",
+    extraComponent,
 }: TopBarArgs) => {
-    return /* HTML */ `<div class="topbar topbar--${sizeVariant}">
+    return /* HTML */ `<div class="topbar">
         <h1 class="topbar__header">${title}</h1>
         <h2 class="topbar__description">${description}</h2>
         <div class="topbar__buttons">
@@ -29,6 +27,12 @@ const TopBar = ({
                 })
                 .join("\n")}
         </div>
+        ${extraComponent
+            ? /* HTML */ `<div class="topbar__separator"></div>
+                  <div class="topbar__extra-component-wrapper">
+                      ${extraComponent}
+                  </div>`
+            : ``}
     </div>`;
 };
 

@@ -17,6 +17,7 @@ $text-brake: 1000px;
         border-radius: 100%;
         position: relative;
         overflow: hidden;
+        background-color: $white;
 
         & img {
             max-width: calc(200px - $horizontal-space-750);
@@ -30,6 +31,20 @@ $text-brake: 1000px;
             left: 0;
             right: 0;
             margin: auto;
+        }
+    }
+
+    &__white-color {
+        & h1,
+        & p {
+            color: $white;
+        }
+    }
+
+    &__black-color {
+        & h1,
+        & p {
+            color: $black;
         }
     }
 

@@ -1,13 +1,21 @@
 import { Technology } from "html-elemnets";
 
+export type StackSliderColorVariant = "white-color" | "black-color";
+
 export type StackSliderArgs = {
     title: string;
     description: string;
     items: Array<Technology>;
+    colorVariant?: StackSliderColorVariant;
 };
 
-const StackSlider = ({ title, description, items }: StackSliderArgs) => {
-    return /* HTML */ `<div class="stack-slider">
+const StackSlider = ({
+    title,
+    description,
+    items,
+    colorVariant = "black-color",
+}: StackSliderArgs) => {
+    return /* HTML */ `<div class="stack-slider stack-slider__${colorVariant}">
         <h1>${title}</h1>
         <p>${description}</p>
         <div class="stack-slider__carousel" id="stack-carousel">
