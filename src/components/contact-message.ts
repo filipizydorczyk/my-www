@@ -1,4 +1,3 @@
-//
 export type ContactMessageArgs = {
     title: string;
     message: string;
