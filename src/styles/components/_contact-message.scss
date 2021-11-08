@@ -1,0 +1,30 @@
+@import "../fonts";
+@import "../colors";
+@import "../spacing";
+
+.contact-message {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: $vericatl-space-900 $horizontal-space-250;
+
+    &__texts {
+        margin-left: -200px;
+    }
+
+    & svg {
+        width: 900px;
+        height: 300px;
+        fill: $gray-100;
+    }
+
+    & h1 {
+        font-size: $font-size-600;
+    }
+
+    & p {
+        font-size: $font-size-200;
+    }
+}

@@ -6,6 +6,9 @@ import Footer, { FooterArgs } from "./components/footer";
 import Cta, { CtaArgs } from "./components/cta";
 import SteppedList, { SteppedListArgs } from "./components/stepped-list";
 import StackSlider, { StackSliderArgs } from "./components/stack-slider";
+import ContactMessage, {
+    ContactMessageArgs,
+} from "./components/contact-message";
 
 const tobBarData: TopBarArgs = {
     title: "Test",
@@ -55,18 +58,24 @@ const steppedListData: SteppedListArgs = {
     ],
 };
 
-const SliderData: StackSliderArgs = {
+const sliderData: StackSliderArgs = {
     title: loremIpsum.generateWords(3),
     description: loremIpsum.generateSentences(4),
     items: stack,
     colorVariant: "white-color",
 };
 
+const contactData: ContactMessageArgs = {
+    title: loremIpsum.generateWords(3),
+    message: loremIpsum.generateSentences(4),
+};
+
 writeFileSync(
     "./build/index.html",
     renderHTML("Hello World", "pl", [
-        TopBar({ ...tobBarData, extraComponent: StackSlider(SliderData) }),
+        TopBar({ ...tobBarData, extraComponent: StackSlider(sliderData) }),
         SteppedList(steppedListData),
+        ContactMessage(contactData),
         Cta(ctaData),
         Footer(footerData),
     ])
