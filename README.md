@@ -86,4 +86,4 @@ TopBar({ ...tobBarData, extraComponent: StackSlider(SliderData) });
 # Resources
 
 Slider that is used in this project is [siema slider](https://github.com/pawelgrzybek/siema).
-Logos were searched on [seek logo](https://seeklogo.com/), [wikimedia](https://commons.wikimedia.org) or on companies websites.
+Logos were searched on [seek logo](https://seeklogo.com/), [wikimedia](https://commons.wikimedia.org), [remixicons](https://remixicon.com/) or on companies websites.
