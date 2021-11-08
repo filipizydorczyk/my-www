@@ -9,6 +9,7 @@ import StackSlider, { StackSliderArgs } from "./components/stack-slider";
 import ContactMessage, {
     ContactMessageArgs,
 } from "./components/contact-message";
+import CardList, { CardListArgs } from "./components/card-list";
 
 const tobBarData: TopBarArgs = {
     title: "Test",
@@ -70,11 +71,81 @@ const contactData: ContactMessageArgs = {
     message: loremIpsum.generateSentences(4),
 };
 
+const cardListData: CardListArgs = {
+    elements: [
+        {
+            title: loremIpsum.generateWords(1),
+            description: loremIpsum.generateSentences(5),
+            icon: icons.capgemini,
+            photo: "/assets/photos/code.jpg",
+            href: "#",
+        },
+        {
+            title: loremIpsum.generateWords(1),
+            description: loremIpsum.generateSentences(5),
+            icon: icons.capgemini,
+            photo: "/assets/photos/code.jpg",
+            href: "#",
+        },
+        {
+            title: loremIpsum.generateWords(1),
+            description: loremIpsum.generateSentences(5),
+            icon: icons.capgemini,
+            photo: "/assets/photos/code.jpg",
+            href: "#",
+        },
+        {
+            title: loremIpsum.generateWords(1),
+            description: loremIpsum.generateSentences(5),
+            icon: icons.sealcode,
+            photo: "/assets/photos/code.jpg",
+            href: "#",
+        },
+        {
+            title: loremIpsum.generateWords(1),
+            description: loremIpsum.generateSentences(5),
+            icon: icons.sealcode,
+            photo: "/assets/photos/code.jpg",
+            href: "#",
+            type: "product",
+        },
+        {
+            title: loremIpsum.generateWords(1),
+            description: loremIpsum.generateSentences(5),
+            icon: icons.capgemini,
+            photo: "/assets/photos/code.jpg",
+            href: "#",
+        },
+        {
+            title: loremIpsum.generateWords(1),
+            description: loremIpsum.generateSentences(5),
+            icon: icons.capgemini,
+            photo: "/assets/photos/code.jpg",
+            href: "#",
+        },
+        {
+            title: loremIpsum.generateWords(1),
+            description: loremIpsum.generateSentences(5),
+            icon: icons.capgemini,
+            photo: "/assets/photos/code.jpg",
+            href: "#",
+        },
+        {
+            title: loremIpsum.generateWords(1),
+            description: loremIpsum.generateSentences(5),
+            icon: icons.sealcode,
+            photo: "/assets/photos/code.jpg",
+            href: "#",
+        },
+    ],
+};
+
 writeFileSync(
     "./build/index.html",
     renderHTML("Hello World", "pl", [
         TopBar({ ...tobBarData, extraComponent: StackSlider(sliderData) }),
         SteppedList(steppedListData),
+        CardList(cardListData),
         ContactMessage(contactData),
         Cta(ctaData),
         Footer(footerData),

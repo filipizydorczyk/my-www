@@ -1,0 +1,53 @@
+@import "../spacing";
+@import "../fonts";
+
+.card-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: $horizontal-space-500;
+    padding: 0 $horizontal-space-250;
+
+    &__imgs {
+        position: relative;
+    }
+
+    &__photo {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+
+    &__icon {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        right: -10px;
+        bottom: -20px;
+    }
+
+    &__element {
+        padding-bottom: 40px;
+        position: relative;
+    }
+
+    &__texts {
+        & h3 {
+            font-size: $font-size-400;
+            margin-bottom: $vericatl-space-500;
+        }
+
+        & p {
+            font-size: $font-size-100;
+        }
+
+        & a {
+            font-size: $font-size-100;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}

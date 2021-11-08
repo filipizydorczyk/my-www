@@ -12,6 +12,7 @@
         "src/components/cta.ts",
         "src/components/stepped-list.ts",
         "src/components/stack-slider.ts",
-        "src/components/contact-message.ts"
+        "src/components/contact-message.ts",
+        "src/components/card-list.ts"
     ]
 }
