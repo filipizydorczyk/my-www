@@ -2,6 +2,7 @@ import { HTMLUrl } from "html-elemnets";
 export type SteppedListElement = {
     title: string;
     content: string;
+    caption: string;
     icon?: HTMLUrl;
 };
 
@@ -24,7 +25,9 @@ const SteppedList = ({ header, elements }: SteppedListArgs) => {
                             class="stepped-list__date-border ${index % 2 == 0
                                 ? `stepped-list__date-border--even`
                                 : `stepped-list__date-border--odd`}"
-                        ></div>
+                        >
+                            <h4>${element.caption}</h4>
+                        </div>
                     </div>`;
                 })
                 .join("\n")}

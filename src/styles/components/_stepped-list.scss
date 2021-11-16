@@ -75,6 +75,10 @@ $text-brake: 1000px;
             border-top-right-radius: 0;
             border-bottom-left-radius: 0;
             left: calc(-1 * $horizontal-space-500 - 2px);
+
+            & h4 {
+                right: $horizontal-space-500;
+            }
         }
 
         &--even {
@@ -82,6 +86,19 @@ $text-brake: 1000px;
             border-top-left-radius: 0;
             border-bottom-right-radius: 0;
             right: calc(-1 * $horizontal-space-500);
+
+            & h4 {
+                left: $horizontal-space-500;
+            }
+        }
+
+        & h4 {
+            display: block;
+            position: absolute;
+            background-color: $white;
+            top: -1rem;
+            padding: 0 $horizontal-space-100;
+            color: $gray-600;
         }
 
         @media (max-width: $text-brake) {
@@ -96,6 +113,15 @@ $text-brake: 1000px;
             border-left: none;
             border-right: none;
             z-index: 0;
+
+            &--odd,
+            &--even {
+                & h4 {
+                    left: $horizontal-space-250;
+                    right: auto;
+                    width: max-content;
+                }
+            }
         }
     }
 

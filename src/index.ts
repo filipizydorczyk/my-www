@@ -39,21 +39,25 @@ const steppedListData: SteppedListArgs = {
         {
             title: loremIpsum.generateWords(1),
             content: loremIpsum.generateSentences(4),
+            caption: loremIpsum.generateWords(2),
             icon: icons.capgemini,
         },
         {
             title: loremIpsum.generateWords(1),
             content: loremIpsum.generateSentences(4),
+            caption: loremIpsum.generateWords(2),
             icon: icons.sealcode,
         },
         {
             title: loremIpsum.generateWords(1),
             content: loremIpsum.generateSentences(4),
+            caption: loremIpsum.generateWords(2),
             icon: icons.hobbajt,
         },
         {
             title: loremIpsum.generateWords(1),
             content: loremIpsum.generateSentences(4),
+            caption: loremIpsum.generateWords(2),
             icon: icons.capgemini,
         },
     ],
