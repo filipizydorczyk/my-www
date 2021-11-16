@@ -15,11 +15,16 @@ const SteppedList = ({ header, elements }: SteppedListArgs) => {
         <h1>${header}</h1>
         <div class="stepped-list__container">
             ${elements
-                .map((element) => {
+                .map((element, index) => {
                     return /* HTML */ `<div class="stepped-list__element">
                         <h3>${element.title}</h3>
                         <p>${element.content}</p>
                         ${element.icon ? `<img src="${element.icon}" />` : ``}
+                        <div
+                            class="stepped-list__date-border ${index % 2 == 0
+                                ? `stepped-list__date-border--even`
+                                : `stepped-list__date-border--odd`}"
+                        ></div>
                     </div>`;
                 })
                 .join("\n")}
