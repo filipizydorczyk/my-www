@@ -14,12 +14,6 @@ $text-brake: 1000px;
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        // display: grid;
-        // grid-template-columns: 50% 50%;
-
-        // @media (max-width: 600px) {
-        //     grid-template-columns: auto;
-        // }
     }
 
     &__element {
@@ -63,16 +57,6 @@ $text-brake: 1000px;
         @media (max-width: 830px) {
             flex: 0 0 calc(100% - $horizontal-space-500);
         }
-
-        // @media (min-width: 830px) {
-        //     &:nth-child(2) {
-        //         margin-top: $vericatl-space-900;
-        //     }
-
-        //     &:nth-child(2n + 3) {
-        //         margin-top: calc(-1 * $vericatl-space-900);
-        //     }
-        // }
     }
 
     & h1 {
