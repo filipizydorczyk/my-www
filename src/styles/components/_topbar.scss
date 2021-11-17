@@ -60,6 +60,13 @@ $buttons-breakpoint: 500px;
         text-decoration: none;
         border: 2px solid $white;
         border-radius: 40px;
+        transition: all 0.25s ease;
+
+        &:hover {
+            border: 2px solid $blue-100;
+            border-top: 2px solid rgba(0, 0, 0, 0);
+            border-radius: 24px;
+        }
 
         @media (max-width: $text-breakpoint) {
             font-size: $font-size-200;
