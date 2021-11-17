@@ -122,8 +122,13 @@ $padding-brake: 360px;
         }
 
         & img {
+            transition: all 0.25s ease;
             height: 21px;
             width: 21px;
+        }
+
+        &:hover img {
+            scale: 1.2;
         }
 
         @media (max-width: $first-column-brake) {
