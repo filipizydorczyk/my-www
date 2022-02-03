@@ -1,5 +1,7 @@
 This repo is archived since I no longer need this website and I probably wont finish it.
 
+---
+
 This is repo with my website that is currently in development stage. It is going to look like this:
 
 ![](./mockups/main.png)
